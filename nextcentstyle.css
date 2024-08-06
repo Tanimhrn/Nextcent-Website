@@ -18,8 +18,11 @@ html {
   font-size: 62.5%;
   font-family: inter, "sans-serif";
 }
+body {
+  background-color: whitesmoke;
+}
 .container {
-  max-width: 1440px;
+  max-width: 144rem;
   margin: 5rem 10rem 0;
 }
 header {
@@ -30,7 +33,7 @@ header {
 header h1 {
   font-size: 4.455rem;
   font-weight: 600;
-  width: 457px;
+  width: 45.7rem;
   color: var(--header-color);
 }
 header :nth-child(3) {
@@ -47,9 +50,9 @@ article button,
   font-size: var(--paragraph-font-size);
   background-color: var(--primary-color);
   color: white;
-  padding: 8px 20px;
+  padding: 0.8rem 2rem;
   font-weight: 500;
-  line-height: 16.7px;
+  line-height: 1.67rem;
   border: 0;
   cursor: pointer;
   animation: pulsate 1.5s infinite;
@@ -104,14 +107,14 @@ section .clients {
   font-weight: 360;
 }
 .clients :nth-child(3) {
-  margin: 0 217.5px;
+  margin: 0 21.75rem;
 }
 .communities {
   margin-top: 1.5rem;
 }
 .communities .community h1 {
   font-size: 19.49px;
-  line-height: 25.06px;
+  line-height: 2.506rem;
   font-weight: 700;
   color: var(--header-color);
 }
@@ -122,14 +125,14 @@ section .clients {
 }
 section .pixelgrade,
 section .tesla {
-  height: 307.66px;
-  width: 1000px;
+  height: 30.766rem;
+  width: 100rem;
   display: flex;
   margin: 10rem auto 10rem;
 }
 .pixelgrade article {
   margin: auto;
-  height: 187.9px;
+  height: 18.79rem;
 }
 .pixelgrade article h1 {
   text-align: start;
@@ -141,18 +144,18 @@ section .tesla {
   margin-top: 3rem;
 }
 .record-figures {
-  width: 375.88px;
-  height: 113.84px;
+  width: 37.588rem;
+  height: 11.384rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 60px;
-  row-gap: 35px;
+  gap: 6rem;
+  row-gap: 3.5rem;
 }
 .record-figures h1 {
   color: var(--header-color);
-  font-size: 19.49px;
-  line-height: 25.06px;
+  font-size: 1.949rem;
+  line-height: 2.506rem;
   font-weight: 700;
 }
 .record-figures p {
@@ -162,8 +165,8 @@ section .tesla {
   display: inline-block;
 }
 .local-bz {
-  height: 202.94px;
-  width: 1000px;
+  height: 20.294rem;
+  width: 100rem;
   display: flex;
   justify-content: space-between;
   margin: 10rem auto 10rem;
@@ -171,33 +174,33 @@ section .tesla {
 .pre-image1::before {
   content: url("images/2heads.png");
   display: inline;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
-  width: 32px;
+  width: 3.2rem;
 }
 .pre-image2::before {
   content: url("images/hands-icon.png");
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
-  width: 32px;
+  width: 3.2rem;
 }
 .pre-image3::before {
   content: url("images/pointingfinger.png");
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
-  width: 32px;
+  width: 3.2rem;
 }
 .pre-image4::before {
   content: url("images/card.png");
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
-  width: 32px;
+  width: 3.2rem;
 }
 .record-figures p {
-  margin-left: 41px;
+  margin-left: 4.1rem;
 }
 
 .local-bz .local :nth-child(1),
@@ -237,29 +240,75 @@ section .tesla {
   padding-bottom: 1.5rem;
 }
 .tesla-logo {
-  margin: auto 0 40px;
+  margin: auto 0 4rem;
 }
 .caring :nth-child(1) {
   margin-bottom: 1.7rem;
 }
 .caring .caring-imgs {
-  width: 1000px;
+  width: 100rem;
   display: flex;
   justify-content: space-around;
   margin: 1.7rem auto 3.5rem;
 }
 .caring .pre-footer > h1 {
   font-size: 4.455rem;
-  line-height: 32.9px;
+  line-height: 3.29rem;
   font-weight: 600;
   color: var(--header-color);
   text-align: center;
 }
 footer img {
-  width: 1440px;
+  position: sticky;
+  bottom: 0;
+  width: 144rem;
   margin: 5rem auto 0;
 }
 .caring .pre-footer button {
   display: block;
   margin: 5rem auto 0;
+}
+@media (max-width: 1024px) {
+  :root {
+    --paragraph-font-size: 1.2rem;
+    --paragraph-lineheight: 2.3rem;
+    --header2-fontsize: 2.5rem;
+    --header2-lineheight: 3rem;
+    --header2-fontweight: 800;
+  }
+
+  .container {
+    max-width: 102.4rem;
+    margin: 5rem 5rem 0;
+    overflow: hidden;
+  }
+  footer img {
+    position: sticky;
+    bottom: 0;
+    width: 102.4rem;
+    margin: 5rem auto 0;
+  }
+  .clients :nth-child(3) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .local-bz {
+    width: 85rem;
+  }
+  section .pixelgrade,
+  section .tesla {
+    width: 85rem;
+  }
+  .tesla p {
+    font-size: 1.2rem;
+  }
+  .caring .caring-imgs {
+    width: 85rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 1.7rem auto 3.5rem;
+  }
+
+
 }
