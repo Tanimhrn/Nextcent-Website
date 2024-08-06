@@ -3,7 +3,8 @@
   --primary-color: #4caf4f;
   --header-color: #4d4d4d;
   --paragraph-color: #717171;
-  --paragraph-font-size: 1.5rem;
+  --paragraph-font-size: 1.3rem;
+  --paragraph-lineheight: 2.3rem;
   --header2-fontsize: 2.5rem;
   --header2-lineheight: 3rem;
   --header2-fontweight: 600;
@@ -35,11 +36,13 @@ header h1 {
 header :nth-child(3) {
   color: var(--paragraph-color);
   padding-top: 1rem;
-  line-height: 16.71px;
+  line-height: var(--paragraph-lineheight);
   font-weight: 400;
   font-size: var(--paragraph-font-size);
 }
-header :nth-child(4) {
+header :nth-child(4),
+article button,
+.pre-footer button {
   margin-top: 1rem;
   font-size: var(--paragraph-font-size);
   background-color: var(--primary-color);
@@ -55,15 +58,12 @@ header :nth-child(4) {
 @keyframes pulsate {
   0% {
     transform: scale(1);
-  
   }
   50% {
     transform: scale(1.1);
-
   }
   100% {
     transform: scale(1);
-   
   }
 }
 
@@ -74,9 +74,14 @@ button:hover {
 section .clients {
   margin-top: 6.5rem;
 }
+
 .clients :nth-child(1),
 .communities :nth-child(1),
-.communities :nth-child(2) {
+.communities :nth-child(2),
+.pixelgrade article h1,
+.local-bz .local :nth-child(1),
+.local-bz .local :nth-child(2),
+.caring :nth-child(1) {
   color: var(--header-color);
   text-align: center;
   font-size: var(--header2-fontsize);
@@ -85,12 +90,18 @@ section .clients {
 }
 .clients :nth-child(2),
 .communities :nth-child(3),
-.communities .community p {
+.communities .community p,
+.pixelgrade article p,
+.record-figures p,
+.local-bz .local :nth-child(3),
+.tesla p,
+.tesla p:nth-of-type(8),
+.caring p {
   color: var(--paragraph-color);
   text-align: center;
   font-size: var(--paragraph-font-size);
-  line-height: 3rem;
-  font-weight: 400;
+  line-height: var(--paragraph-lineheight);
+  font-weight: 360;
 }
 .clients :nth-child(3) {
   margin: 0 217.5px;
@@ -99,13 +110,156 @@ section .clients {
   margin-top: 1.5rem;
 }
 .communities .community h1 {
-    font-size: 19.49px;
-    line-height: 25.06px;
-    font-weight: 700;
-    color: var(--header-color);
+  font-size: 19.49px;
+  line-height: 25.06px;
+  font-weight: 700;
+  color: var(--header-color);
 }
 .community {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+section .pixelgrade,
+section .tesla {
+  height: 307.66px;
+  width: 1000px;
+  display: flex;
+  margin: 10rem auto 10rem;
+}
+.pixelgrade article {
+  margin: auto;
+  height: 187.9px;
+}
+.pixelgrade article h1 {
+  text-align: start;
+}
+.pixelgrade article p {
+  text-align: start;
+}
+.para-container {
+  margin-top: 3rem;
+}
+.record-figures {
+  width: 375.88px;
+  height: 113.84px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 60px;
+  row-gap: 35px;
+}
+.record-figures h1 {
+  color: var(--header-color);
+  font-size: 19.49px;
+  line-height: 25.06px;
+  font-weight: 700;
+}
+.record-figures p {
+  text-align: left;
+}
+.record-figures img {
+  display: inline-block;
+}
+.local-bz {
+  height: 202.94px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10rem auto 10rem;
+}
+.pre-image1::before {
+  content: url("images/2heads.png");
+  display: inline;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 32px;
+}
+.pre-image2::before {
+  content: url("images/hands-icon.png");
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 32px;
+}
+.pre-image3::before {
+  content: url("images/pointingfinger.png");
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 32px;
+}
+.pre-image4::before {
+  content: url("images/card.png");
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 32px;
+}
+.record-figures p {
+  margin-left: 41px;
+}
+
+.local-bz .local :nth-child(1),
+.local-bz .local :nth-child(2),
+.local-bz .local :nth-child(3) {
+  text-align: left;
+}
+.local-bz .local :nth-child(2) {
+  color: var(--primary-color);
+}
+.local-bz .local {
+  height: 11.384rem;
+  margin: auto 0 5rem;
+}
+.tesla {
+  display: flex;
+  width: 100rem;
+  height: 28rem;
+  justify-content: space-between;
+}
+.tesla p {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+.tesla .tesla-para {
+  height: 23rem;
+}
+.tesla .tesla-para h3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+.tesla p:nth-of-type(8) {
+  text-align: left;
+  padding-bottom: 1.5rem;
+}
+.tesla-logo {
+  margin: auto 0 40px;
+}
+.caring :nth-child(1) {
+  margin-bottom: 1.7rem;
+}
+.caring .caring-imgs {
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  margin: 1.7rem auto 3.5rem;
+}
+.caring .pre-footer > h1 {
+  font-size: 4.455rem;
+  line-height: 32.9px;
+  font-weight: 600;
+  color: var(--header-color);
+  text-align: center;
+}
+footer img {
+  width: 1440px;
+  margin: 5rem auto 0;
+}
+.caring .pre-footer button {
+  display: block;
+  margin: 5rem auto 0;
 }
